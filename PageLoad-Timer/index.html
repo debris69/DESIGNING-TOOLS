@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" charset="utf-8"></script>
+    <script type="text/javascript">
+           var timerStart = Date.now();
+    </script>
+    <style>
+      html,body{
+        background-color:#353b48;
+      }
+      #img{
+        width: 298px;
+        height: 447px;
+        left:40%;
+        top: 30%;
+        position: absolute;
+        trannsform: translate(50%,50%);
+        border: 1px solid #f5f6fa;
+      }
+      p{
+        font-family: Montserrat;
+        font-size: 500%;
+        text-align: center;
+        font-weight: 100;
+        color: #f5f6fa;
+      }
+    </style>
+  </head>
+  <body>
+      <img id="img" src="img/1.jpg" alt="">
+      <p>
+        Website Loading Test
+      </p>
+      <script type="text/javascript">
+         $(document).ready(function() {
+             console.log("Time until DOMready: ", Date.now()-timerStart);
+         });
+         $(window).on('load',function() {
+             console.log("Time until everything loaded: ", Date.now()-timerStart,"ms");
+             var times= Date.now()-timerStart;
+         });
+    </script>
+  </body>
+</html>
